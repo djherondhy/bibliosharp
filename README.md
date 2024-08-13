@@ -1,6 +1,6 @@
 # 📚 BiblioSharp - Projeto de Console para Empréstimo de Livros
 
-Bem-vindo ao projeto de console para gerenciamento de empréstimos de livros! Este projeto é uma excelente oportunidade para aprimorar suas habilidades em programação C#, explorando conceitos fundamentais como manipulação de dados, estruturas de controle e lógica de programação.
+O Projeto de Console para Empréstimo de Livros é um aplicativo simples, desenvolvido em C#, que simula o funcionamento básico de um sistema de empréstimo de livros em uma biblioteca. Através de uma interface de linha de comando, os usuários podem registrar novos clientes, realizar empréstimos e gerenciar a devolução de livros.
 
 ## 🚀 Funcionalidades
 
