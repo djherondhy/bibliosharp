@@ -11,7 +11,7 @@ internal class Usuario {
 
     public Usuario(string nome, string cpf) { Nome = nome; CPF = cpf; }
     public void EmprestarLivro(Livro livro) {
-        if (LivrosEmprestados.Count > 3) {
+        if (LivrosEmprestados.Count >= 3) {
             Console.WriteLine("\n>> Você não pode emprestar mais de 3 livros simultaneamente!");
         }
         else {

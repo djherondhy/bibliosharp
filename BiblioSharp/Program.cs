@@ -76,7 +76,14 @@ biblioteca.Livros = new List<Livro>(){
 };
 
 biblioteca.Usuarios = new() {
-    new Usuario("Djhérondhy", "052.720.312-29")
+    new Usuario("Djhérondhy", "052.720.312-29") {
+        LivrosEmprestados = new List<Livro>() {
+            biblioteca.Livros[0], biblioteca.Livros[1], biblioteca.Livros[2]
+        },
+        Historico =  new List<Livro>() {
+            biblioteca.Livros[0], biblioteca.Livros[1], biblioteca.Livros[2]
+        }
+    }
 };
 
 void ExibirMenu() {
