@@ -15,18 +15,22 @@ internal class Usuario {
             Console.WriteLine("\n>> Você não pode emprestar mais de 3 livros simultaneamente!");
         }
         else {
-            livro.Emprestar();
-            LivrosEmprestados.Add(livro);
-            Historico.Add(livro);
-            Console.WriteLine($"\n>> Livro {livro.Titulo} - {livro.Autor} Emprestado!");
+            if (livro.Emprestar()) {
+                LivrosEmprestados.Add(livro);
+                Historico.Add(livro);
+                Console.WriteLine($"\n>> Livro {livro.Titulo} - {livro.Autor} Emprestado!");
+            }
+            
         }
 
     }
 
     public void DevolverLivro(Livro livro) {
-        livro.Devolver();
-        LivrosEmprestados.Remove(livro);
-        Console.WriteLine($"\n>> Livro  {livro.Titulo} - {livro.Autor} Devolvido!");
+        if (livro.Devolver()) {
+            LivrosEmprestados.Remove(livro);
+            Console.WriteLine($"\n>> Livro  {livro.Titulo} - {livro.Autor} Devolvido!");
+        }
+        
     }
 
     public void ExibirLivrosEmprestados() {

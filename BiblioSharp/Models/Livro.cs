@@ -7,16 +7,33 @@ internal class Livro {
     public DateTime DataPublicacao { get; set; }
     public bool EstaEmprestado { get; set; }
 
+    public Livro() {
+        EstaEmprestado = false;
+    }
     public Livro(string titulo) {
         Titulo = titulo;
     }
 
-    public void Emprestar() {
-        EstaEmprestado = true;
+    public bool Emprestar() {
+        if (!EstaEmprestado) {
+            EstaEmprestado = true;
+            return true;
+        }else{
+            Console.WriteLine($"\n>> Livro {Titulo} - {Autor} não está disponivel!");
+            return false;
+        }
+        
     }
 
-    public void Devolver() {
-        EstaEmprestado = false;
+    public bool Devolver() {
+        if (EstaEmprestado) {
+            EstaEmprestado = false;
+            return true;
+        }
+        else {
+            Console.WriteLine($"\n>> Livro {Titulo} - {Autor} não foi emprestado!");
+            return false;
+        }
     }
 
     public void ExibirInformações() {
